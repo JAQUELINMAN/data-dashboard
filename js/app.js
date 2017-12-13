@@ -428,7 +428,7 @@ window.addEventListener('load', function() {
     studentsByGenerations();
   }
 
-  /*  se cambia el contenido segun sección elegida*/
+  /*  e cambia el contenido segun sección elegida*/
   var addAndHide = function(event) {
     var tabSeleccionado = event.target.dataset.tabSelect;
     var overview = document.getElementById('section-overview');
