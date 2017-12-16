@@ -16,13 +16,11 @@
   </head>
   <body>
     <header>
-      <figure class="box-logo">
-        <img class="logo-header" src="assets/images/logo-laboratoria.svg" alt="logo laboratoria">
-      </figure>
+      <figure class="box-logo"><img class="logo-header" src="assets/images/logo-laboratoria.svg" alt="logo laboratoria"></figure>
       <nav class="box-nav">
         <ul>
           <li><i class="fa fa-bars fa-2x" aria-hidden="true" id="open-animated-menu"></i></li>
-          <li><i class="fa fa-bell-o fa-2x" aria-hidden="true"></i></li>
+          <li><i class="fa fa fa-comment-o fa-2x" aria-hidden="true" id="open-animated-chat"></i></li>
         </ul>
       </nav>
       <nav class="box-nav2">
@@ -31,26 +29,28 @@
         </div>
 
       </nav>
-    </header>
-    <main>
       <section class="box-filter">
         <div class="select-filter">
-          <select name="promo" id="promo-filter">
+          <select name="promo" id="promo-filter"> <!--El elemento optgroup representa un grupo de opciones ( option ) temáticamente definido, que forma parte de un control select . Las opciones agrupadas pueden ser etiquetadas mediante el atributo label , que usarán los navegadores para mostrar como nombre del grupo.-->
               <option value="" hidden>Selecciona una opción</option>
               <optgroup label="Arequipa">
+                <option value="AQP" data-city="AQP">Arequipa Total</option>
                 <option value="AQP" data-year="2016-2">AQP 2016 - II</option>
                 <option value="AQP" data-year="2017-1">AQP 2017 - I</option>
               </optgroup>
               <optgroup label="Lima">
+                <option value="LIM" data-city="LIM">Lima Total</option>
                 <option value="LIM" data-year="2016-2">LIM 2016 - II</option>
                 <option value="LIM" data-year="2017-1">LIM 2017 - I</option>
                 <option value="LIM" data-year="2017-2">LIM 2017 - II</option>
               </optgroup>
               <optgroup label="México">
+                <option value="CDMX" data-city="CDMX">México Total</option>
                 <option value="CDMX" data-year="2017-1">CDMX 2017 - I</option>
                 <option value="CDMX" data-year="2017-2">CDMX 2017 - II</option>
               </optgroup>
               <optgroup label="Chile">
+                <option value="SCL" data-city="SCL">SCL Total</option>
                 <option value="SCL" data-year="2016-2">SCL 2016 - II</option>
                 <option value="SCL" data-year="2017-1">SCL 2017 - I</option>
                 <option value="SCL" data-year="2017-2">SCL 2017 - II</option>
@@ -63,6 +63,9 @@
           <li id="teachersTab" class="tab" data-tab-select = 'tabTeachers'>TEACHERS</li>
         </ul>
       </section>
+    </header>
+    <main>
+
       <section class="container-graphics" id="section-overview">
 
         <!-- ENROLLMENT -->
@@ -75,7 +78,7 @@
             </div>
             <div class="small-graphic-boxes">
               <P id="dropout-percent" class="textDate">-</p>
-              <P>% DROPOUT</P>
+              <p class="texTbox"> % DROPOUT</p>
             </div>
           </div>
           <div class="graphic" id="enrollment-chart"></div>
@@ -86,7 +89,7 @@
           <div class="container-small-boxes">
             <div class="small-graphic-boxes">
               <p id="box-achievement" class="textDate">-</p>
-              <p># STUDENTS THAT MEET THE TARGET</p>
+              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
             </div>
             <div class="small-graphic-boxes">
               <p id="percent-achievement" class="textDate">-</p>
@@ -170,6 +173,7 @@
           </div>
           <div class="graphic" id="graphicImg">
             <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            <img src="assets/images/circle-graphic.png" alt="grafico">
           </div>
         </div>
         <!-- LIFE SKILLS -->
@@ -198,6 +202,7 @@
           </div>
           <div class="graphic" id="graphicImg">
             <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            <img src="assets/images/circle-graphic.png" alt="grafico">
           </div>
         </div>
       </section>
@@ -205,7 +210,7 @@
       <section class="menu" id="animated-menu">
         <div class="user">
           <hr>
-          <p class="welcome">Welcome Shirley Silvana</p>
+          <p class="welcome">Welcome Lucile Baratier</p>
           <hr>
           <a href="javascript:void(0)" class="closebtn" id="close-animated-menu">&times;</a> <!--mi referencia fue -->
           <figure class="photo"></figure>
@@ -220,7 +225,19 @@
         <div class="setting"><a href="#">Salir</a></div>
       </section>
       <!--Fin de Menu que aparece y desaparece-->
-
+      <!--Inicio de chat que aparece y desaparece-->
+      <section class="chat" id="animated-chat">
+        <div class="box-chat">
+          <hr>
+          <p class="welcome-chat">Welcome Please write a comment</p>
+          <hr>
+          <a href="javascript:void(0)" class="closebtn" id="close-animated-chat">&times;</a> <!--mi referencia fue -->
+          <form name="message" action="">
+            <input name="usermsg" type="text" id="usermsg" size="63" />
+            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+          </form>
+        </div>
+      </section>
       <section id="section-students" style="display:none">
         <div class="specialization">
           <h4>SPECIALIZATION</h4>

@@ -13,22 +13,28 @@ body {
 header {
   background-color: #fff;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 8;
 }
 
 .logo-header {
   width: 300px;
+  height: 60px;
 }
 
 .box-nav {
   position: absolute;
   left: 25px;
-  top: 40px;
+  top: 18px;
+  margin-bottom: 5px;
 }
 
 .box-nav ul li {
   display: inline;
   list-style: none;
   margin: 0 10px;
+  margin-bottom: 5px;
 }
 
 .box-nav2 {
@@ -38,22 +44,25 @@ header {
 }
 
 .language {
-  background-color: #FFC107;
+  background-color: black;
   border-radius: 19px;
-  color: #000;
-  padding:10px 18px;
+  color: white;
+  padding:10px 10px;
   text-align: center;
   width: 80px;
-  margin-top: 1em;
+  margin-top: 8px;
+  font-size: 13px;
+  margin-bottom: 5px;
 }
 
 .language a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .language a:hover {
   color: #fff;
+  background-color: #FFC107;
 }
 
 /*Agregando POINTER a todos los iconos*/
@@ -65,21 +74,22 @@ header {
   color: #f7b617;
 }
 
-.fa-bell-o:hover {
+.fa-comment-o:hover {
   color: #f7b617;
 }
 
-/*Main*/
 .box-filter {
   background-color: /*#4C4743;*/#f7b617;
   color: #ffffff;
-  box-shadow: 0px 5px 4px #c4c4c4;
+  text-align: left;
+  /*box-shadow: 0px 5px 4px #c4c4c4;*/
 }
 
 /* Estilos select filer */
 .select-filter {
- margin-left: 100px;
- padding: 20px 0;
+ margin-left: 90px;
+ padding: 8px 0;
+ display: inline-block;
 }
 
 #promo-filter {
@@ -89,7 +99,7 @@ border: 2px solid #f7b617;
 border-radius: 3px;
 color: #ffffff;
 font-weight: 300;
-font-size: 1.2em;
+font-size: 1em;
 padding: 0.25em;
 }
 
@@ -116,13 +126,14 @@ padding: 0.25em;
 
 .tabs {
   margin-left: 100px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   font-weight: bold;
+
 }
 
 .tabs li {
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 15px;
   border-right: 2px solid #f7b617;
   padding-right: 1em;
   cursor: pointer;
@@ -136,9 +147,19 @@ padding: 0.25em;
   margin: 0 20px;
 }
 
+
+main {
+  margin-top: 130px;
+  position: absolute;
+  width: 100%;
+}
 /*Graphics section*/
 .container-graphics {
   overflow: auto;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+
 }
 
 .big-graphic {
@@ -146,17 +167,22 @@ padding: 0.25em;
   /*height: 500px;*/
   margin: 30px auto;
   width: 1000px;
-  box-shadow: 4px 4px 4px #c4c4c4;
+  box-shadow: 2px 2px 2px #c4c4c4;
+  display: inline-block;
 }
 
 #graphicImg {
   width: 100%;
   margin: 0 auto;
+  text-align: center;
+  content: center;
+  align-items: center;
 }
+
 
 .big-graphic span {
   display: inline-block;
-  font-size: 1.5em;
+  /*font-size: 1.3em;*/
   font-weight: 600;
   padding: 20px;
 }
@@ -192,36 +218,51 @@ padding: 0.25em;
 .small-graphic {
   background-color: #fff;
   float: left;
-  height: 540px;
-  margin: 15px auto;
+  height: 470px;
+  margin: 10px auto;
   vertical-align: top;
   width: 32%;
-  box-shadow: 4px 4px 4px #c4c4c4;
+  box-shadow: 2px 2px 2px #c4c4c4;
   margin-right: 1%;
   overflow: hidden;
+  padding: 10px;
+  align-items: center;
 }
 
 .graphic {
-  margin-top: 150px;
+  margin-top: 10px;
+  margin-right:0px;
+  display: inline-block;
 }
 
 .graphic img {
   padding-left: 1em;
   padding-bottom: 0.8em;
+  display: absolute;
+  text-align: center;
+  content: center;
+  align-items: center;
 }
 
 .small-graphic span {
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: bold;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 40px;
 }
 
 .container-small-boxes {
   padding: 1em;
+  margin-right:0px;
+  text-align: center;
+  /*padding-left: 50px;*/
+  content: center;
+  align-items: center;
 }
 .small-graphic-boxes {
   background-color: #f7b617;
-  float: left;
+  display: inline-block;
+  /*float: left*/
   text-align: center;
   vertical-align: top;
   width: 40%;
@@ -230,37 +271,45 @@ padding: 0.25em;
   border-radius: 3px;
   box-shadow: 2px 2px 2px #aaa8a8;
   margin-right: 1em;
+  align-items: center;
 }
 
+
 .textDate {
-  font-size: 3.4em;
-  font-weight: 300;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
   border-bottom: 1px solid #ffff;
   width: 2.7em;
   height: 1.2em;
+
 }
 
 #dropout-percent {
   color: red;
+  text-align: center;
 }
 
 .texTbox {
-  font-size: .8em;
-  padding-top: 1em;
+  font-size: .7em;
+  text-align: center;
+  padding-top: 1.2em;
 }
 
 .number-boxes {
-  font-size: 3.5em;
-  font-weight: 300;
+  font-size: 2em;
+  font-weight: 200px;
+  text-align: center;
   border-bottom: 1px solid #ffffff;
 }
+
 
 /*Menu section*/
 .menu {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 50;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -269,6 +318,7 @@ padding: 0.25em;
   background-color: rgba(43, 43, 43, 0.98);
   color: #fff;
 }
+
 
 .menu .user {
   padding-left: 1em;
@@ -292,7 +342,7 @@ padding: 0.25em;
 }
 
 .photo {
-  background-image: url(../assets/images/cliente.jpeg);
+  background-image: url(../assets/images/lulu.jpg);
   background-size: cover;
   width: 5em;
   height: 5em;
@@ -348,6 +398,34 @@ padding: 0.25em;
 
 .setting:hover {
   background-color: #f7b617;
+}
+.chat {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 80;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  background-color: rgba(43, 43, 43, 0.98);
+  color: #f7b617;
+}
+
+.chat .welcome-chat {
+  height: 500px;
+  text-align: center;
+  font-size: 60px;
+}
+
+#usermsg {
+  height: 50px;
+}
+
+#submitmsg {
+  text-align: center;
+  align-items: center;
 }
 
 /*--------->  Clases generales <---------*/

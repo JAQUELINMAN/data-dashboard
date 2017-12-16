@@ -1,23 +1,36 @@
 window.addEventListener('load', function() {
-  // ----------------------> Funcionalidad Menú <-----------------------
+  // ----------------------> Abre y cierra menu del cliente <-----------------------
   var openAnimatedMenu = document.getElementById('open-animated-menu');
   var closeAnimatedMenu = document.getElementById('close-animated-menu');
 
   openAnimatedMenu.addEventListener('click', openMenu);
   function openMenu() {
-    document.getElementById('animated-menu').style.width = '250px';
+    document.getElementById('animated-menu').style.width = '300px';
   }
 
   closeAnimatedMenu.addEventListener('click', closeMenu);
   function closeMenu() {
     document.getElementById('animated-menu').style.width = '0';
   }
+  // ----------------------> Abre y cierra chat del cliente <-----------------------
+  var openAnimatedChat = document.getElementById('open-animated-chat');
+  var closeAnimatedChat = document.getElementById('close-animated-chat');
 
-  // ---------> Función para seleccionar sede y promoción, y generar datos <---------
+  openAnimatedChat.addEventListener('click', openChat);
+  function openChat() {
+    document.getElementById('animated-chat').style.width = '300px';
+  }
+
+  closeAnimatedChat.addEventListener('click', closeChat);
+  function closeChat() {
+    document.getElementById('animated-chat').style.width = '0';
+  }
+  // ---------> Función para seleccionar sede y promoción <---------
   var select = document.getElementById('promo-filter');
   select.addEventListener('change', promFilter);
 
   function promFilter() {
+    /*var city = select.options[select.selectedIndex].dataset.city;*/
     var city = select.value;
     var prom = select.options[select.selectedIndex].dataset.year;
     var totalStudents = data[city][prom]['students'].length;
@@ -277,6 +290,7 @@ window.addEventListener('load', function() {
       var options = {'title': 'Rating otorgado por las alumnas a sus Jedi Master',
         'width': 500,
         'height': 300,
+        'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
       var chart = new google.visualization.PieChart(document.getElementById('jedi-chart'));
@@ -294,6 +308,7 @@ window.addEventListener('load', function() {
       var options2 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
         'width': 500,
         'height': 300,
+        'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
       var chart2 = new google.visualization.PieChart(document.getElementById('teacher-chart'));
@@ -311,6 +326,7 @@ window.addEventListener('load', function() {
       var options3 = {'title': 'Supera, Cumple o No Cumple LABORATORIA las expectativas de las alumnas',
         'width': 500,
         'height': 300,
+        'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
       var chart3 = new google.visualization.PieChart(document.getElementById('satisfaction-chart'));
@@ -329,6 +345,7 @@ window.addEventListener('load', function() {
       var options4 = {'title': 'Recomendarias LABORATORIA a otras personas',
         'width': 500,
         'height': 300,
+        'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
       var chart4 = new google.visualization.PieChart(document.getElementById('nps-chart'));
@@ -346,6 +363,7 @@ window.addEventListener('load', function() {
       var options5 = {'title': 'Alumnas que asisten a clases vs alumnas que han desertado',
         'width': 500,
         'height': 300,
+        'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
       var chart5 = new google.visualization.PieChart(document.getElementById('enrollment-chart'));
@@ -363,11 +381,15 @@ window.addEventListener('load', function() {
       var options6 = {'title': 'Estudiantes que pasan la meta de puntaje establecido por sprint',
         'width': 500,
         'height': 300,
+        'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
       var chart6 = new google.visualization.PieChart(document.getElementById('achiv-chart'));
       chart6.draw(data6, options6);
     }
+
+
+
     // Set a callback to run when the Google Visualization API is loaded
     google.charts.setOnLoadCallback(drawChart);
     /* Agregar funcion para que aparezcan lista de estudiantes*/
